@@ -107,16 +107,16 @@ const Navbar = () => {
                             Get Started
                         </Link>
                         
-                        {/* Mobile Menu Toggle Button */}
+                        {/* Mobile Menu Toggle Button - Standard 3 Equal Lines */}
                         <button
                             className="relative z-50 p-2 -mr-1 text-forge-navy hover:text-forge-navy/80 transition-colors rounded-none hover:bg-zinc-100"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-label="Toggle Menu"
                         >
-                            <div className="w-6 h-5 flex flex-col justify-between items-end">
-                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 rotate-45 translate-y-[9px]" : "w-6"}`} />
-                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "opacity-0" : "w-5"}`} />
-                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 -rotate-45 -translate-y-[9px]" : "w-4"}`} />
+                            <div className="w-6 h-5 flex flex-col justify-between">
+                                <span className={`h-[2px] w-6 bg-current transition-all duration-300 ${isMenuOpen ? "rotate-45 translate-y-[9px]" : ""}`} />
+                                <span className={`h-[2px] w-6 bg-current transition-all duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
+                                <span className={`h-[2px] w-6 bg-current transition-all duration-300 ${isMenuOpen ? "-rotate-45 -translate-y-[9px]" : ""}`} />
                             </div>
                         </button>
                     </div>
