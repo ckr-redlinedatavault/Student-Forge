@@ -98,18 +98,28 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Mobile Menu Toggle Button */}
-                    <button
-                        className="xl:hidden relative z-50 p-2 -mr-2 text-forge-navy hover:text-forge-navy/80 transition-colors rounded-none hover:bg-zinc-100"
-                        onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        aria-label="Toggle Menu"
-                    >
-                        <div className="w-6 h-5 flex flex-col justify-between items-end">
-                            <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 rotate-45 translate-y-[9px]" : "w-6"}`} />
-                            <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "opacity-0" : "w-5"}`} />
-                            <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 -rotate-45 -translate-y-[9px]" : "w-4"}`} />
-                        </div>
-                    </button>
+                    {/* Mobile Menu Actions */}
+                    <div className="flex xl:hidden items-center gap-3">
+                        <Link
+                            href="/get-started"
+                            className="inline-flex h-9 items-center justify-center bg-forge-navy px-4 text-[11px] font-black text-white hover:bg-forge-navy/90 transition-all rounded-full uppercase tracking-widest shadow-sm"
+                        >
+                            Get Started
+                        </Link>
+                        
+                        {/* Mobile Menu Toggle Button */}
+                        <button
+                            className="relative z-50 p-2 -mr-1 text-forge-navy hover:text-forge-navy/80 transition-colors rounded-none hover:bg-zinc-100"
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label="Toggle Menu"
+                        >
+                            <div className="w-6 h-5 flex flex-col justify-between items-end">
+                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 rotate-45 translate-y-[9px]" : "w-6"}`} />
+                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "opacity-0" : "w-5"}`} />
+                                <span className={`h-[2px] bg-currentColor rounded-none transition-all duration-300 ${isMenuOpen ? "w-6 -rotate-45 -translate-y-[9px]" : "w-4"}`} />
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
 
