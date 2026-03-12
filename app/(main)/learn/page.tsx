@@ -120,17 +120,17 @@ const LearnPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                         {[
-                            { name: "Strategic Workshops", desc: "High-intensity sessions focusing on specific toolkits and emerging tech.", img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=600" },
-                            { name: "Execution Bootcamps", desc: "Long-form intensive programs on sustainable software architecture.", img: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=600" },
-                            { name: "Professional Courses", desc: "Learning paths covering UI/UX and Frontend with certifications.", img: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600" },
-                            { name: "Industry Webinars", desc: "Live sessions with Lead Engineers discussing the digital workforce.", img: "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&q=80&w=600" }
+                            { name: "Strategic Workshops", desc: "High-intensity sessions focusing on specific toolkits and emerging tech.", href: "/programs/workshops" },
+                            { name: "Execution Bootcamps", desc: "Long-form intensive programs on sustainable software architecture.", href: "/programs/bootcamps" },
+                            { name: "Professional Courses", desc: "Learning paths covering UI/UX and Frontend with certifications.", href: "/programs/courses" },
+                            { name: "Industry Webinars", desc: "Live sessions with Lead Engineers discussing the digital workforce.", href: "/programs/webinars" }
                         ].map((item, i) => (
-                            <div key={i} className="group relative bg-zinc-50 border border-zinc-100 p-6 hover:bg-forge-navy transition-all duration-300">
+                            <Link key={i} href={item.href} className="group relative bg-zinc-50 border border-zinc-100 p-6 hover:bg-forge-navy transition-all duration-300">
                                 <div className="relative z-10 space-y-3">
                                     <h3 className="font-semibold text-base text-forge-navy group-hover:text-white transition-colors tracking-tight">{item.name}</h3>
                                     <p className="text-[12px] text-forge-navy/60 group-hover:text-white/60 leading-relaxed font-semibold transition-colors">{item.desc}</p>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -146,9 +146,9 @@ const LearnPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {[
-                            { title: "Forge Foundation", desc: "Perfect for beginners. Covering core logic and modern web tools.", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600" },
-                            { title: "Forge Elevate", desc: "Focus on React and Cloud architectures in simulated start-up environments.", img: "https://images.unsplash.com/photo-1522071823991-b5182046d38a?auto=format&fit=crop&q=80&w=600" },
-                            { title: "Forge Launch", desc: "Bridge to your career with placement support and live industry projects.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600" }
+                            { title: "Forge Foundation", desc: "Perfect for beginners. Covering core logic and modern web tools.", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=600", href: "/programs/foundation" },
+                            { title: "Forge Elevate", desc: "Focus on React and Cloud architectures in simulated start-up environments.", img: "https://images.unsplash.com/photo-1522071823991-b5182046d38a?auto=format&fit=crop&q=80&w=600", href: "/programs/elevate" },
+                            { title: "Forge Launch", desc: "Bridge to your career with placement support and live industry projects.", img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600", href: "/programs/launch" }
                         ].map((prog, i) => (
                             <div key={i} className="flex flex-col bg-white border border-zinc-200 transition-all group">
                                 <div className="relative h-48 w-full overflow-hidden">
@@ -159,8 +159,8 @@ const LearnPage = () => {
                                     <p className="text-forge-navy/70 text-[13px] leading-relaxed mb-6 flex-grow font-semibold">
                                         {prog.desc}
                                     </p>
-                                    <Link href="#" className="inline-flex items-center justify-center w-full py-3 bg-forge-navy text-white text-[10px] font-semibold uppercase tracking-widest hover:bg-forge-orange transition-all">
-                                        Enroll Now
+                                    <Link href={prog.href} className="inline-flex items-center justify-center w-full py-3 bg-forge-navy text-white text-[10px] font-semibold uppercase tracking-widest hover:bg-forge-orange transition-all">
+                                        View Program
                                     </Link>
                                 </div>
                             </div>
