@@ -51,14 +51,14 @@ const Hero = () => {
                         {/* Sharp Edge Buttons */}
                         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 justify-center lg:justify-start">
                             <Link
-                                href="/enroll"
+                                href="/get-started"
                                 className="w-full sm:w-auto px-10 py-3.5 bg-zinc-900 text-white rounded-none text-sm font-bold hover:bg-zinc-800 transition-all border border-zinc-900 text-center"
                             >
                                 Enroll Now
                             </Link>
 
                             <Link
-                                href="/programs"
+                                href="/learn"
                                 className="w-full sm:w-auto px-10 py-3.5 bg-white text-zinc-900 border border-zinc-300 rounded-none text-sm font-bold hover:bg-zinc-50 transition-all text-center"
                             >
                                 Explore Programs
