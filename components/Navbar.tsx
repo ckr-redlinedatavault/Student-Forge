@@ -99,14 +99,7 @@ const Navbar = () => {
                     </div>
 
                     {/* Mobile Menu Actions */}
-                    <div className="flex xl:hidden items-center gap-3">
-                        <Link
-                            href="/get-started"
-                            className="inline-flex h-9 items-center justify-center bg-forge-navy px-4 text-[11px] font-black text-white hover:bg-forge-navy/90 transition-all rounded-full uppercase tracking-widest shadow-sm"
-                        >
-                            Get Started
-                        </Link>
-                        
+                    <div className="flex xl:hidden items-center">
                         {/* Mobile Menu Toggle Button - Standard 3 Equal Lines */}
                         <button
                             className="relative z-50 p-2 -mr-1 text-forge-navy hover:text-forge-navy/80 transition-colors rounded-none hover:bg-zinc-100"
